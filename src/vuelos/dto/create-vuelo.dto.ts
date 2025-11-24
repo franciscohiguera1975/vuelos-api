@@ -1,10 +1,9 @@
 import { IsBoolean, IsDate, IsNumber, IsString } from 'class-validator';
 
 export class CreateVueloDto {
+   
     @IsString()
-    name: string;
-    @IsString()
-    origin: string;
+    origen: string;
 
     @IsString()
     destino: string;

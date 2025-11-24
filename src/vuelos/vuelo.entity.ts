@@ -6,7 +6,7 @@ export class Vuelo {
   id: string;
 
   @Column()
-  origin: string;
+  origen: string;
 
   @Column()
   destino: string;

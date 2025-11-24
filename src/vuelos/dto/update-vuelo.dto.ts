@@ -1,8 +1,7 @@
 import { IsBoolean, IsDate, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class UpdateVueloDto {
-      @IsString()
-      name: string;
+
       @IsString()
       origin: string;
   
