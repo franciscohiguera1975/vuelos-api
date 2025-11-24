@@ -3,7 +3,7 @@ import { IsBoolean, IsDate, IsNumber, IsOptional, IsString } from 'class-validat
 export class UpdateVueloDto {
 
       @IsString()
-      origin: string;
+      origen: string;
   
       @IsString()
       destino: string;

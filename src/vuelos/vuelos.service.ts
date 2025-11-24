@@ -37,4 +37,23 @@ export class VuelosService {
     if (!vuelo) return null;
     return this.vueloRepository.remove(vuelo);
   }
+
+  async calculoPromedio(dataBody: any) {
+    const precios = dataBody.precios;
+    const numeroLimite = dataBody.numeroLimite;
+    let size=0
+    let suma=0;
+    for (const precio of precios){
+      if (precio <numeroLimite){
+        suma+=precio;
+        size++;
+      }
+    }
+    const promedio = suma /size;
+    
+    return {
+      precios: precios,
+      promedio: promedio
+    };
+  }
 }

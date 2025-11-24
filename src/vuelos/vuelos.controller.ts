@@ -31,4 +31,9 @@ export class VuelosController {
   remove(@Param('id') id: string) {
     return this.vuelosService.remove(id);
   }
+
+  @Post('calculo-promedio')
+  calculoPromedio(@Body() dataBody: any) {
+    return this.vuelosService.calculoPromedio(dataBody);
+  }
 }
