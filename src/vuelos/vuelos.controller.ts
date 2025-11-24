@@ -36,4 +36,9 @@ export class VuelosController {
   calculoPromedio(@Body() dataBody: any) {
     return this.vuelosService.calculoPromedio(dataBody);
   }
+
+  @Post('contar-rutas')
+  contarRutas(@Body() dataBody: any) {
+    return this.vuelosService.contarRutas(dataBody);
+  }
 }

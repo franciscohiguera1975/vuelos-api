@@ -56,4 +56,21 @@ export class VuelosService {
       promedio: promedio
     };
   }
+
+  async contarRutas(dataBody: any) {
+    const rutas = dataBody.rutas;
+    const origenFiltro = dataBody.origenFiltro;
+    let contador=0;
+    for (const ruta of rutas){
+      if (ruta.origen == origenFiltro){
+        contador++;
+      }
+    }
+    
+    return {
+      rutas: rutas,
+      origenFiltro: origenFiltro,
+      cantidadRutas: contador
+    };
+  }
 }
